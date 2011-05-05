@@ -1,0 +1,30 @@
+Description:
+============
+
+RC Algorithm Twister is program which helps you find your own modification of
+Rubik's cube algorithm. It can show you all variants (different twists of
+cube) from point you're confident, so you can check if different twists could
+be better for your hands.
+
+Requirements:
+=============
+
+ - CoffeeScript interpreter
+ - Your own algorithm in standard notation (RLUDFBrludfb, xyz, with "2" or "'")
+
+Usage:
+======
+
+    ./twister.coffee [algorithm]
+
+You can also transpose your algorithm (or its part) with rotation:
+
+ - to transpose whole algorithm:
+
+    ./twister.coffee "+xRUR'"
+
+ - to transpose only part of algorithm, and get back to known position after:
+
+    ./twister.coffee "R+xU-R'" - rotate part by X axis
+
+    ./twister.coffee "R+x+yU-R'" - rotate part by X, then by Y axis, and get back after U
